@@ -1,0 +1,10 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Welcome, @ViewData["Name"]!</h1>
+<p>You visited this page @ViewBag.NumTimes times.</p>
+@for (int i = 0; i < (int)ViewBag.NumTimes; i++){
+    <p>@ViewData["Message"]</p>
+}

@@ -1,0 +1,19 @@
+@using Lesson_2.Models
+@{
+    ViewData["Title"] = "View Component và Partial View";
+    var student = new StudentViewModel
+    {
+        Name = "Nguyễn Bá Quốc",
+        Major = "Công nghệ thông tin"
+    };
+}
+<h2>Ví dụ 2: View Component và Partial View</h2>
+
+<h3>1. View Component</h3>
+<p>Component tự xử lý dữ liệu và trả về giao diện:</p>
+@await Component.InvokeAsync("Welcome", new { name = "Quốc" })
+
+<hr />
+<h3>2. Partial View</h3>
+<p>Partial View dùng lại một phần giao diện, nhận dữ liệu từ trang cha:</p>
+<partial name="_StudentCard" model="student" />
